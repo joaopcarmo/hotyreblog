@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="shortcut icon" href="imgs/pneu.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HoTyre Blog - Home</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="imgs/pneu.png" alt="Logo" /></a>
+            <h1><a href="index.html">HoTyre Blog</a></h1>
+        </div>
+        <nav id="nav-menu">
+            <a href="#" class="active">Home</a>
+            <a href="pilotos.html">Pilotos Ativos</a>
+            <a href="equipes.html">Equipes</a>
+            <a href="gp.html">Grand Prix's</a>
+            <a href="lendas.html">Hall da Fama</a>
+        </nav>
+        <button class="burger-menu" id="burger-menu">&#9776;</button>
+    </header>
+
+    <main>
+        <h2 id="descricao">
+            HoTyre Blog - O universo da Fórmula 1 ao seu alcance.
+        </h2>
+        <img src="imgs/fundo.jpg" alt="Imagem de fundo" style="display: none" />
+        <div class="search">
+            <div class="search-buttons">
+                <input type="text" id="campo-pesquisa" placeholder="Buscar conteúdo" />
+                <button id="search-button" class="btn btn-red" onclick="pesquisar()">Buscar</button>
+                
+                <section class="resultados-pesquisa" id="resultados-pesquisa">
+                    <!-- Resultados da pesquisa serão exibidos aqui -->
+                </section>
+            </div>
+        </div>
+        <h3 style="text-align: center">
+            Bem-vindo ao HoTyre! Seu destino definitivo para todas as informações
+            sobre a Fórmula 1. Aqui, você encontrará perfis detalhados dos pilotos,
+            análises das equipes e informações completas sobre cada Grande Prêmio.
+            Nosso objetivo é fornecer um recurso abrangente e atualizado para todos
+            os fãs de Fórmula 1, desde os novatos até os aficionados de longa data.
+            <br />
+            <br />
+            No HoTyre, somos apaixonados por Fórmula 1 e dedicados a compartilhar
+            essa paixão com você. Nosso site é uma plataforma dedicada
+            exclusivamente a fornecer informações detalhadas e precisas sobre:<br />
+            <br />
+            -Pilotos: Conheça os heróis da pista. Oferecemos biografias completas,
+            estatísticas de carreira e curiosidades sobre cada piloto do grid.
+            <br />
+            <br />
+            -Equipes: Descubra as histórias e as estratégias por trás das equipes
+            que competem na Fórmula 1. Analisamos o desempenho, a história e os
+            planos futuros de cada equipe. <br />
+            <br />
+            -Grandes Prêmios: Acompanhe cada etapa do campeonato com informações
+            detalhadas sobre os circuitos, resultados históricos e previsões para as
+            próximas corridas. <br />
+            <br />
+            - Hall da Fama: Celebre as lendas da Fórmula 1. Nossa seção Hall da Fama
+            homenageia os pilotos, equipes e personalidades que deixaram um legado
+            duradouro no esporte. <br />
+        </h3>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-nav">
+                <h3>Mais</h3>
+                <a href="#">Início</a>
+                <a href="#">Sobre Nós</a>
+                <a href="pages/privacidade.html">Política de Privacidade</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>Email: contato@hotyreblog.com.br</p>
+                <p>Telefone: (31) 9877-5599</p>
+            </div>
+            <div class="footer-social">
+                <h3>Redes Sociais</h3>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="ano"></span>
+                <a href="https://www.linkedin.com/in/joaopcarmo/">HoTyre Blog.</a>
+                Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("ano").textContent = new Date().getFullYear();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("ano").textContent = new Date().getFullYear();
+
+            const burgerMenu = document.getElementById("burger-menu");
+            const navMenu = document.getElementById("nav-menu");
+
+            burgerMenu.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

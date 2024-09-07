@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/pneu.png" type="image/x-icon" />
+    <title>HoTyre Blog - Pilotos</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="imgs/pneu.png" alt="Logo"></a>
+            <h1><a href="index.html">HoTyre Blog</a></h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pilotos.html" class="active">Pilotos Ativos</a>
+            <a href="equipes.html">Equipes</a>
+            <a href="gp.html">Grand Prix's</a>
+            <a href="lendas.html">Hall da Fama</a>
+        </nav>
+        <button class="burger-menu" id="burger-menu">
+            &#9776;
+        </button>
+    </header>
+    <main>
+            <section id="pilot-grid" class="grid-container">
+                <!-- Cards de pilotos serão exibidos aqui -->
+            </section>
+            <section class="resultados-pesquisa" id="resultados-pesquisa">
+                <!-- Resultados da pesquisa serão exibidos aqui -->
+            </section>
+    </main>
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; <span id="ano"></span> <a href="https://www.linkedin.com/in/joaopcarmo/">HoTyre Blog.</a>
+                Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('ano').textContent = new Date().getFullYear();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("ano").textContent = new Date().getFullYear();
+
+            const burgerMenu = document.getElementById("burger-menu");
+            const navMenu = document.getElementById("nav-menu");
+
+            burgerMenu.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderizarPilotos();
+        });
+    </script>
+</body>
+</body>
+
+</html>

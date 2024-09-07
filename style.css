@@ -1,0 +1,394 @@
+/* Importing fonts */
+@import url('https://db.onlinewebfonts.com/c/4944f4308352f169f622b1f098fa2203?family=Formula1+Display+Wide');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Resetting margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body {
+    font-family: "Chakra Petch", sans-serif; /* Font family */
+    color: #ffffff; /* Text color */
+    background-color: #000; /* Fallback background color */
+    background-image: url(imgs/fundo.jpg); /* Background image */
+    background-size: cover; /* Ensures the background covers the entire screen */
+    background-repeat: no-repeat; /* Prevents background repetition */
+    background-position: center center; /* Centers the background */
+}
+
+/* Header styles */
+header {
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; /* Aligns logo and nav on opposite sides */
+    align-items: center; /* Centers items vertically */
+    z-index: 1000; /* Ensures header is on top of other elements */
+    border-bottom: 1px solid #333; /* Bottom border */
+    height: 80px; /* Fixed height */
+}
+
+/* Logo container styles */
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between logo and text */
+    cursor: pointer;
+}
+
+header .logo-container img {
+    width: 100px; /* Logo width */
+}
+
+header .logo-container a {
+    color: #e0e0e0; /* Logo link color */
+    text-decoration: none; /* Removes underline */
+}
+
+header .logo-container h1 {
+    font-size: 40px; /* Logo text size */
+    font-weight: 00; /* Font weight (thin) */
+    color: #ffffff; /* Logo text color */
+}
+
+/* Navigation links styles */
+header nav a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Removes underline */
+    margin: 0 20px; /* Space between links */
+    font-size: 22px; /* Font size */
+    font-weight: 500; /* Font weight */
+    transition: color 0.6s; /* Smooth color transition */
+    padding-bottom: 8px; /* Padding for hover effect */
+}
+
+/* Active link styles */
+header nav a.active {
+    color: #e50914; /* Active link color */
+    border-bottom: 2px solid #e50914; /* Underline effect */
+}
+
+/* Hover effect for navigation links */
+header nav a:hover {
+    color: #ff0000; /* Hover color */
+}
+
+/* Main content padding */
+main {
+    padding: 100px 30px 30px; /* Adds padding to content */
+    background-color: #111; /* Dark background */
+}
+
+/* Search buttons container */
+.search-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Wraps elements in small screens */
+    padding-bottom: 50px; /* Adds space at the bottom */
+    
+}
+
+/* Search input styles */
+#campo-pesquisa {
+    padding: 12px 18px; /* Padding for input */
+    border-radius: 32px; /* Rounded corners */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border with transparency */
+    background-color: rgba(255, 255, 255, 0.3); /* Background with transparency */
+    color: white; /* Input text color */
+    width: 300px; /* Input width */
+}
+
+/* Search button styles */
+#search-button {
+    padding: 12px 18px; /* Padding for button */
+    border-radius: 32px; /* Rounded corners */
+}
+
+/* Description section */
+#descricao {
+    text-align: center; /* Centered text */
+    font-size: 30px; /* Font size */
+    padding: 50px; /* Padding around text */
+}
+
+/* Grid container styles */
+#pilot-grid, #equipes-grid, #gp-grid, #lendas-grid {
+    display: flex;
+    flex-wrap: wrap; /* Wraps cards */
+    gap: 1rem; /* Gap between cards */
+    padding: 1rem; /* Padding inside container */
+}
+
+/* Individual card styles */
+.item {
+    border: 1px solid #333; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Padding inside the card */
+    width: calc(33.33% - 1rem); /* Card width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #1a1a1a; /* Background color */
+    text-align: center; /* Centered content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligns content */
+    height: auto;
+    min-height: 450px; /* Minimum height for consistency */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Card hover effect */
+.item:hover {
+    transform: translateY(-5px); /* Moves card upwards */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Image styles for cards */
+.card-img {
+    width: 100%; /* Full width */
+    height: 350px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area */
+    object-position: center 20%; /* Positions the image */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    margin-bottom: 1rem; /* Space below the image */
+}
+
+/* Card title */
+.item h2 {
+    font-size: 1.5rem; /* Title size */
+    margin-bottom: 0.5rem; /* Space below the title */
+}
+
+/* Card description */
+.item p {
+    font-size: 1rem; /* Description font size */
+    margin-bottom: 1rem; /* Space below the text */
+}
+
+/* Button in cards */
+.item a {
+    display: inline-block; /* Block button */
+    padding: 0.5rem 1rem; /* Padding inside button */
+    background-color: #e50914; /* Red background */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button hover effect */
+.item a:hover {
+    background-color: #ff0000; /* Changes button color on hover */
+}
+
+/* Estilo geral para a seção de resultados de pesquisa */
+/* Contêiner dos resultados da pesquisa */
+#resultados-pesquisa {
+    display: flex;
+    flex-wrap: wrap; /* Wraps cards */
+    gap: 1rem; /* Gap between cards */
+    padding: 1rem; /* Padding inside container */
+}
+
+/* Estilo para cada item de resultado */
+.item-resultado {
+    border: 1px solid #333; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Padding inside the card */
+    width: calc(33.33% - 1rem); /* Card width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #1a1a1a; /* Background color */
+    text-align: center; /* Centered content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligns content */
+    height: auto;
+    min-height: 450px; /* Minimum height for consistency */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Efeito de hover para os cards */
+.item-resultado:hover {
+    transform: translateY(-5px); /* Moves card upwards */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Imagem dos cards (se houver imagem) */
+.item-resultado .card-img {
+    width: 100%; /* Full width */
+    height: 350px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area */
+    object-position: center 20%; /* Positions the image */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    margin-bottom: 1rem; /* Space below the image */
+}
+
+/* Título do resultado */
+.item-resultado h2 {
+    font-size: 1.5rem; /* Title size */
+    margin-bottom: 0.5rem; /* Space below the title */
+    color: #fff; /* Title text color */
+}
+
+/* Descrição do resultado */
+.item-resultado .descricao-meta {
+    font-size: 1rem; /* Description font size */
+    margin-bottom: 1rem; /* Space below the text */
+    color: #ccc; /* Description text color */
+}
+
+/* Link "Mais informações" */
+.item-resultado a:last-of-type {
+    display: inline-bl
+}
+
+
+/* Footer styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    color: #e0e0e0; /* Text color */
+    padding: 50px 30px; /* Padding inside footer */
+    border-top: 1px solid #333; /* Top border */
+    text-align: center; /* Centered content */
+}
+
+/* Footer content layout */
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Space around the sections */
+    align-items: flex-start; /* Aligns sections at the top */
+    flex-wrap: wrap; /* Wraps on smaller screens */
+    gap: 40px; /* Gap between sections */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Centers the content */
+}
+
+/* Footer sections */
+.footer-nav, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 220px; /* Minimum width for small screens */
+    text-align: left;
+}
+
+/* Footer titles */
+.footer-nav h3, .footer-contact h3, .footer-social h3 {
+    font-size: 20px; /* Title size */
+    margin-bottom: 15px; /* Space below title */
+    color: #e50914; /* Red color for section titles */
+}
+
+/* Footer links */
+.footer-nav a, .footer-contact a {
+    display: block; /* Block-level link */
+    color: #e0e0e0; /* Link color */
+    text-decoration: none; /* No underline */
+    margin-bottom: 12px; /* Space below each link */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s; /* Smooth hover transition */
+}
+
+/* Footer link hover effect */
+.footer-nav a:hover, .footer-contact a:hover {
+    color: #ff0000; /* Hover color */
+}
+
+/* Footer social icons */
+.footer-social a {
+    color: #ffffff; /* Icon color */
+    font-size: 30px; /* Icon size */
+    margin: 0 20px; /* Space between icons */
+}
+
+/* Social icons hover effect */
+.footer-social a:hover {
+    color: #e50914; /* Hover color */
+}
+
+/* Footer bottom text */
+.footer-bottom {
+    margin-top: 30px; /* Space above */
+    font-size: 16px; /* Font size */
+    color: #a8a6a6; /* Text color */
+}
+
+/* Footer bottom links */
+.footer-bottom a {
+    color: #a8a6a6; /* Link color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+/* Hamburger menu button */
+.burger-menu {
+    display: none; /* Hidden on larger screens */
+    background: transparent; /* Transparent background */
+    border: none; /* No border */
+    color: #fff; /* Button color */
+    font-size: 2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    position: absolute; /* Positioned absolutely */
+    right: 1rem;
+    top: 1.5rem;
+    z-index: 1001; /* Above other content */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    header nav a {
+        font-size: 16px;
+    }
+    header .logo-container h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: calc(50% - 1rem); /* Adjust card width */
+    }
+
+    nav {
+        display: none; /* Hide navigation initially */
+        flex-direction: column; /* Stack links vertically */
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+        padding: 1rem; /* Padding inside */
+        z-index: 1000; /* On top of content */
+    }
+
+    nav.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    nav a {
+        padding: 1rem; /* Padding for each link */
+        text-align: center; /* Centered links */
+        width: 100%; /* Full width */
+    }
+
+    .burger-menu {
+        display: block; /* Show burger menu */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 100%; /* Full width for cards */
+    }
+    header .logo-container h1 {
+        font-size: 30px;
+    }
+    
+}
