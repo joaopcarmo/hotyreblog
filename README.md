@@ -4,6 +4,10 @@
 
 O **HoTyre Blog** é uma plataforma dedicada aos fãs de Fórmula 1. O site fornece informações abrangentes sobre pilotos, equipes, grandes prêmios e um hall da fama. Com um design moderno e responsivo, o HoTyre Blog visa ser um recurso completo para acompanhar as últimas notícias e detalhes sobre o universo da Fórmula 1.
 
+## Visualização 👀
+
+https://hotyreblog.vercel.app/index.html
+
 ## Funcionalidades 🌟
 
 - **Home**: Página inicial com uma visão geral do blog e um campo de pesquisa 🔍.
@@ -19,23 +23,6 @@ O **HoTyre Blog** é uma plataforma dedicada aos fãs de Fórmula 1. O site forn
 - **JavaScript**: Funcionalidades interativas, como pesquisa e exibição dinâmica de dados.
 - **Fontes**: Google Fonts e Font Awesome para fontes e ícones.
 
-## Como Usar ❓
-
-1. Clone este repositório para o seu computador:
-
-    ```bash
-    git clone https://github.com/seu-usuario/hotyreblog.git
-    ```
-
-2. Navegue até o diretório do projeto:
-
-    ```bash
-    cd hotyreblog
-    ```
-
-3. Abra o arquivo `index.html` em um navegador para visualizar o site.
-
-4. Para desenvolvimento, você pode editar os arquivos HTML, CSS e JavaScript conforme necessário.
 
 ## Estrutura do Projeto 📁
 
